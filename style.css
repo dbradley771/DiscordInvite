@@ -1,0 +1,77 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Courgette', serif;
+}
+
+#envelope-front-holder, #envelope-back-holder, #letter-holder {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    align-content: flex-end;
+    pointer-events: none;
+    min-width: 40rem;
+}
+
+#envelope-front-holder, #envelope-back-holder {
+    overflow-y: scroll;
+}
+
+#envelope-front-holder>*, #envelope-back-holder>*, #letter-holder>* {
+    flex-grow: 1;
+}
+
+#envelope-back {
+    pointer-events: none;
+    background: url('top.png') bottom no-repeat;
+    z-index: 100;
+}
+
+#letter-box {
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    z-index: 200;
+}
+
+#letter {
+    height: 100%;
+    overflow-y: scroll;
+    pointer-events: auto;
+}
+
+#letter-content {
+    background: #fdf9f1;
+    margin: 60vh auto 40vh auto;
+    padding: 3rem 2rem;
+    max-width: 30rem;
+    min-width: 30rem;
+    font-size: 1.4em;
+}
+
+#link {
+    font-family: 'Roboto', sans-serif;
+}
+
+#envelope-front {
+    pointer-events: none;
+    background: url('bottom.png') bottom no-repeat;
+    z-index: 300;
+}
+
+#wood {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: url('wood.jpg') center no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
